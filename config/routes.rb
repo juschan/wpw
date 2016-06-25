@@ -1,4 +1,11 @@
 Rails.application.routes.draw do
+  get 'static/index'
+
+  get 'static/about'
+
+  get 'static/faq'
+
+  resources :pokemons
   get 'secret_stuff/public_page'
   get 'secret_stuff/secret_page'
 

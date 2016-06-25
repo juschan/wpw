@@ -1,0 +1,57 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Pokemons</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Desc</th>
+      <th>Height</th>
+      <th>Weight</th>
+      <th>Category</th>
+      <th>Ability</th>
+      <th>Type</th>
+      <th>Weakness</th>
+      <th>Hp</th>
+      <th>Attack</th>
+      <th>Defence</th>
+      <th>Special attack</th>
+      <th>Special defence</th>
+      <th>Speed</th>
+      <th>Image url large</th>
+      <th>Image url small</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @pokemons.each do |pokemon| %>
+      <tr>
+        <td><%= pokemon.name %></td>
+        <td><%= pokemon.desc %></td>
+        <td><%= pokemon.height %></td>
+        <td><%= pokemon.weight %></td>
+        <td><%= pokemon.category %></td>
+        <td><%= pokemon.ability %></td>
+        <td><%= pokemon.type %></td>
+        <td><%= pokemon.weakness %></td>
+        <td><%= pokemon.hp %></td>
+        <td><%= pokemon.attack %></td>
+        <td><%= pokemon.defence %></td>
+        <td><%= pokemon.special_attack %></td>
+        <td><%= pokemon.special_defence %></td>
+        <td><%= pokemon.speed %></td>
+        <td><%= pokemon.image_url_large %></td>
+        <td><%= pokemon.image_url_small %></td>
+        <td><%= link_to 'Show', pokemon %></td>
+        <td><%= link_to 'Edit', edit_pokemon_path(pokemon) %></td>
+        <td><%= link_to 'Destroy', pokemon, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Pokemon', new_pokemon_path %>

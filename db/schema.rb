@@ -11,7 +11,28 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160624130841) do
+ActiveRecord::Schema.define(version: 20160625071642) do
+
+  create_table "pokemons", force: :cascade do |t|
+    t.string   "name"
+    t.string   "desc"
+    t.string   "height"
+    t.string   "weight"
+    t.string   "category"
+    t.string   "ability"
+    t.string   "type"
+    t.string   "weakness"
+    t.integer  "hp"
+    t.integer  "attack"
+    t.integer  "defence"
+    t.integer  "special_attack"
+    t.integer  "special_defence"
+    t.integer  "speed"
+    t.string   "image_url_large"
+    t.string   "image_url_small"
+    t.datetime "created_at",      null: false
+    t.datetime "updated_at",      null: false
+  end
 
   create_table "users", force: :cascade do |t|
     t.string   "name"

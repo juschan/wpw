@@ -1,0 +1,81 @@
+<%= form_for(@pokemon) do |f| %>
+  <% if @pokemon.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@pokemon.errors.count, "error") %> prohibited this pokemon from being saved:</h2>
+
+      <ul>
+      <% @pokemon.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :name %><br>
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label :desc %><br>
+    <%= f.text_field :desc %>
+  </div>
+  <div class="field">
+    <%= f.label :height %><br>
+    <%= f.text_field :height %>
+  </div>
+  <div class="field">
+    <%= f.label :weight %><br>
+    <%= f.text_field :weight %>
+  </div>
+  <div class="field">
+    <%= f.label :category %><br>
+    <%= f.text_field :category %>
+  </div>
+  <div class="field">
+    <%= f.label :ability %><br>
+    <%= f.text_field :ability %>
+  </div>
+  <div class="field">
+    <%= f.label :type %><br>
+    <%= f.text_field :type %>
+  </div>
+  <div class="field">
+    <%= f.label :weakness %><br>
+    <%= f.text_field :weakness %>
+  </div>
+  <div class="field">
+    <%= f.label :hp %><br>
+    <%= f.number_field :hp %>
+  </div>
+  <div class="field">
+    <%= f.label :attack %><br>
+    <%= f.number_field :attack %>
+  </div>
+  <div class="field">
+    <%= f.label :defence %><br>
+    <%= f.number_field :defence %>
+  </div>
+  <div class="field">
+    <%= f.label :special_attack %><br>
+    <%= f.number_field :special_attack %>
+  </div>
+  <div class="field">
+    <%= f.label :special_defence %><br>
+    <%= f.number_field :special_defence %>
+  </div>
+  <div class="field">
+    <%= f.label :speed %><br>
+    <%= f.number_field :speed %>
+  </div>
+  <div class="field">
+    <%= f.label :image_url_large %><br>
+    <%= f.text_field :image_url_large %>
+  </div>
+  <div class="field">
+    <%= f.label :image_url_small %><br>
+    <%= f.text_field :image_url_small %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
