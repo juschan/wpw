@@ -1,8 +1,10 @@
 class PokemonsController < ApplicationController
   before_action :set_pokemon, only: [:show, :edit, :update, :destroy]
-
+  before_action :authenticate_user, only: [ :edit, :update, :destroy]
+  
   # GET /pokemons
   # GET /pokemons.json
+  
   def index
     @pokemons = Pokemon.all
   end
