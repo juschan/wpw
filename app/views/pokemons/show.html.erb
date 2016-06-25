@@ -31,8 +31,8 @@
 </p>
 
 <p>
-  <strong>Type:</strong>
-  <%= @pokemon.type %>
+  <strong>Variety:</strong>
+  <%= @pokemon.variety %>
 </p>
 
 <p>
@@ -72,12 +72,12 @@
 
 <p>
   <strong>Image url large:</strong>
-  <%= @pokemon.image_url_large %>
+  <%= image_tag(@pokemon.image_url_large) %>
 </p>
 
 <p>
   <strong>Image url small:</strong>
-  <%= @pokemon.image_url_small %>
+  <%= image_tag(@pokemon.image_url_small) %>
 </p>
 
 <%= link_to 'Edit', edit_pokemon_path(@pokemon) %> |

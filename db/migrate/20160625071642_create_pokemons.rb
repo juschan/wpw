@@ -7,7 +7,7 @@ class CreatePokemons < ActiveRecord::Migration
       t.string :weight
       t.string :category
       t.string :ability
-      t.string :type
+      t.string :variety
       t.string :weakness
       t.integer :hp
       t.integer :attack

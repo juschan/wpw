@@ -20,7 +20,7 @@ ActiveRecord::Schema.define(version: 20160625071642) do
     t.string   "weight"
     t.string   "category"
     t.string   "ability"
-    t.string   "type"
+    t.string   "variety"
     t.string   "weakness"
     t.integer  "hp"
     t.integer  "attack"
