@@ -7,21 +7,36 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-  
+<div class="container">  
+
 <% if user_logged_in? %>
 <h3>Hello, <%= current_user.name %></h3>
   <%= link_to "Logout", logout_path, method: :delete %>
 <% else %>
   <%= link_to "Login", login_path %>
 <% end %>
-  
-<% flash.each do |name, message| %>
-<div class ="flash-message flash-message-<%= name %>" >
-  <%= message %>
+
+ | <%= link_to "Home", root_path %> |
+<%= link_to "Pokemons!!", pokemons_path %> |
+<%= link_to "About", static_about_path %> |
+<%= link_to "FAQ", static_faq_path %> 
+
+<div class = "row">
+    <div class="col-sm-2"></div>
+    <div class="col-sm-8">
+      <% flash.each do |name, message| %>
+      <div class ="flash-message flash-message-<%= name %>" >
+      <%= message %>
+      </div>
+      <% end %>
+  </div>
+  <div class="col-sm-2"></div>
 </div>
-<% end %>
+  
+
 
 <%= yield %>
 
+</div>
 </body>
 </html>

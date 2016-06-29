@@ -47,9 +47,9 @@ Pokemon.create({
 
 Pokemon.create({
     name: "Gulpin",
-    desc: "",
+    desc: "Virtually all of Gulpin's body is its stomach. As a result, it can swallow something its own size. This Pokémon's stomach contains a special fluid that digests anything.",
     height: "1' 04''",
-    weight: "Stom22.7 lbach",
+    weight: "22.7 lb",
     category: "Stomach", 
     ability: "Liquid Ooze", 
     variety: "Poison",
@@ -66,7 +66,7 @@ Pokemon.create({
 
 Pokemon.create({
     name: "Jynx",
-    desc: "",
+    desc: "Jynx walks rhythmically, swaying and shaking its hips as if it were dancing. Its motions are so bouncingly alluring, people seeing it are compelled to shake their hips without giving any thought to what they are doing.",
     height: "4' 07''",
     weight: "89.5 lb",
     category: "Human Shape", 
@@ -85,7 +85,7 @@ Pokemon.create({
 
 Pokemon.create({
     name: "Slowpoke",
-    desc: "",
+    desc: "Slowpoke uses its tail to catch prey by dipping it in water at the side of a river. However, this Pokémon often forgets what it's doing and often spends entire days just loafing at water's edge.",
     height: "3' 11''",
     weight: "79.4 lb",
     category: "Dopey", 
