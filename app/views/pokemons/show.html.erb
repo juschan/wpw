@@ -1,9 +1,51 @@
 <p id="notice"><%= notice %></p>
 
+<script>
+         $(document).ready(function() {
+    var chart1 = new Highcharts.Chart({
+        chart: {
+            renderTo: 'container',
+            type: 'bar',
+            backgroundColor: '#E0CCD5',
+            style: {color: '#ffffff', fontSize: '16px'}
+        },
+        xAxis: {
+            categories: ['Hp', 'Attack', 'Defence', 'Special Attack', 'Special Defence', 'Speed'],
+            labels: {
+                style: {
+                    fontSize:'15px'
+                }
+            }
+        },
+        xYxis: {
+            labels: {
+                style: {
+                    fontSize:'15px'
+                }
+            }
+        },
+        title: {
+            text: 'Pokemon Stats'
+        },
+        series: [ {name: 'Levels', data: [ <%= @pokemon.hp %> , 
+          <%= @pokemon.attack %>,
+          <%= @pokemon.defence %>,
+          <%= @pokemon.special_attack %>,
+          <%= @pokemon.special_defence %>,
+          <%= @pokemon.speed %>]
+        }],
+        legend: {
+           enabled: false
+        }
+    });
+});
+          
+        </script>
+
 <div class='container'>
   <div class="row">
     <div class="col-sm-8">
-      <h1><%= @pokemon.name %></h1>
+      <center><h1><%= @pokemon.name %></h1></center>
     </div>
   </div>
   
@@ -26,21 +68,17 @@
     </div>
     <div class="row">
       <div class="col-sm-12">
-        <p><strong>Hp:</strong><%= @pokemon.hp %></p>
-        <p><strong>Attack: </strong><%= @pokemon.attack %></p>
-        <p><strong>Defence: </strong><%= @pokemon.defence %></p>
-        <p><strong>Special attack: </strong><%= @pokemon.special_attack %></p>
-        <p><strong>Special defence: </strong><%= @pokemon.special_defence %></p>
-        <p><strong>Speed: </strong><%= @pokemon.speed %></p>
+        <div id="container" style="width:100%; height:400px;"></div>
       </div>
     </div>
   
-
+<br />
 <div class="row">
+  <div class="col-sm-8">
 <%= link_to 'Edit', edit_pokemon_path(@pokemon) %> |
 <%= link_to 'Back', pokemons_path %>
 </div>
-
+</div>
 </div>
 
 

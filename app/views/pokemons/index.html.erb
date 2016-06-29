@@ -6,7 +6,7 @@
     <% @pokemons.each do |pokemon| %>
     <div class="col-sm-3">
     <div class="thumbnail">
-      <%= image_tag(pokemon.image_url_small) %>
+      <%= link_to image_tag(pokemon.image_url_small), pokemon %>
       <div class="caption">
         <h3><%= pokemon.name %></h3>
         <p><%= pokemon.desc %></p>

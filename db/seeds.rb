@@ -89,7 +89,7 @@ Pokemon.create({
     height: "3' 11''",
     weight: "79.4 lb",
     category: "Dopey", 
-    ability: "Oblivious", 
+    ability: "Oblivious - Keeps the Pokémon from being infatuated or falling for taunts.", 
     variety: "Water",
     weakness: "Dark", 
     hp: 4,
