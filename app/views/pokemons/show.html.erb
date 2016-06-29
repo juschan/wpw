@@ -1,84 +1,46 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Name:</strong>
-  <%= @pokemon.name %>
-</p>
+<div class='container'>
+  <div class="row">
+    <div class="col-sm-8">
+      <h1><%= @pokemon.name %></h1>
+    </div>
+  </div>
+  
+  <div class="row">
+    <div class="col-sm-5">
+      <p>
+        <%= image_tag(@pokemon.image_url_large) %>
+      </p>
+    </div>
+    <div class="col-sm-5">
+      <p><strong>Name: </strong><%= @pokemon.name %></p>
+      <p><strong>Desc: </strong><%= @pokemon.desc %></p>
+      <p><strong>Height: </strong><%= @pokemon.height %></p>
+      <p><strong>Weight: </strong><%= @pokemon.weight %></p>
+      <p><strong>Category: </strong><%= @pokemon.category %></p>
+      <p><strong>Ability: </strong><%= @pokemon.ability %></p>
+      <p><strong>Variety: </strong><%= @pokemon.variety %></p>
+      <p><strong>Weakness: </strong><%= @pokemon.weakness %></p>
 
-<p>
-  <strong>Desc:</strong>
-  <%= @pokemon.desc %>
-</p>
+    </div>
+    <div class="row">
+      <div class="col-sm-12">
+        <p><strong>Hp:</strong><%= @pokemon.hp %></p>
+        <p><strong>Attack: </strong><%= @pokemon.attack %></p>
+        <p><strong>Defence: </strong><%= @pokemon.defence %></p>
+        <p><strong>Special attack: </strong><%= @pokemon.special_attack %></p>
+        <p><strong>Special defence: </strong><%= @pokemon.special_defence %></p>
+        <p><strong>Speed: </strong><%= @pokemon.speed %></p>
+      </div>
+    </div>
+  
 
-<p>
-  <strong>Height:</strong>
-  <%= @pokemon.height %>
-</p>
-
-<p>
-  <strong>Weight:</strong>
-  <%= @pokemon.weight %>
-</p>
-
-<p>
-  <strong>Category:</strong>
-  <%= @pokemon.category %>
-</p>
-
-<p>
-  <strong>Ability:</strong>
-  <%= @pokemon.ability %>
-</p>
-
-<p>
-  <strong>Variety:</strong>
-  <%= @pokemon.variety %>
-</p>
-
-<p>
-  <strong>Weakness:</strong>
-  <%= @pokemon.weakness %>
-</p>
-
-<p>
-  <strong>Hp:</strong>
-  <%= @pokemon.hp %>
-</p>
-
-<p>
-  <strong>Attack:</strong>
-  <%= @pokemon.attack %>
-</p>
-
-<p>
-  <strong>Defence:</strong>
-  <%= @pokemon.defence %>
-</p>
-
-<p>
-  <strong>Special attack:</strong>
-  <%= @pokemon.special_attack %>
-</p>
-
-<p>
-  <strong>Special defence:</strong>
-  <%= @pokemon.special_defence %>
-</p>
-
-<p>
-  <strong>Speed:</strong>
-  <%= @pokemon.speed %>
-</p>
-
-<p>
-  <strong>Image url large:</strong>
-  <%= image_tag(@pokemon.image_url_large) %>
-</p>
-
-<p>
-  <strong>Image url small:</strong>
-  <%= image_tag(@pokemon.image_url_small) %>
-</p>
-
+<div class="row">
 <%= link_to 'Edit', edit_pokemon_path(@pokemon) %> |
 <%= link_to 'Back', pokemons_path %>
+</div>
+
+</div>
+
+
