@@ -1,29 +1,30 @@
-<<<<<<< HEAD
+# Mini-Project - Weird Pokemon Wiki
 
-     ,-----.,--.                  ,--. ,---.   ,--.,------.  ,------.
-    '  .--./|  | ,---. ,--.,--. ,-|  || o   \  |  ||  .-.  \ |  .---'
-    |  |    |  || .-. ||  ||  |' .-. |`..'  |  |  ||  |  \  :|  `--, 
-    '  '--'\|  |' '-' ''  ''  '\ `-' | .'  /   |  ||  '--'  /|  `---.
-     `-----'`--' `---'  `----'  `---'  `--'    `--'`-------' `------'
-    ----------------------------------------------------------------- 
+This is a simple wiki app which allows users to view, create, edit and delete various weird Pokemon. 
 
+The app is currently hosted on the Heroku platform: [Weird Pokemon Wiki](https://afternoon-savannah-34323.herokuapp.com/)
 
-Welcome to your Rails project on Cloud9 IDE!
+###Technology
+The technology used include:
 
-To get started, just do the following:
+- Ruby on Rails (ruby 2.3.0p0, rails 4.2.5);
+- Boostrap 3.3;
+- Postgres (in production);
 
-1. Run the project with the "Run Project" button in the menu bar on top of the IDE.
-2. Preview your new app by clicking on the URL that appears in the Run panel below (https://wpw-juschan.c9users.io/).
-
-Happy coding!
-The Cloud9 IDE team
+The development was done on Cloud9 platform using sqlite3 database. 
 
 
-## Support & Documentation
+###How it works
 
-Visit http://docs.c9.io for support, or to learn more about using Cloud9 IDE. 
-To watch some training videos, visit http://www.youtube.com/user/c9ide
-=======
-# wpw
-Mini-Project 3: Weird Pokemon Wiki
->>>>>>> 29eaf880080961ed7aeb59e1a604c35e254f16f0
+The default page displays all the weird Pokemons in the system via a grid display.
+
+The wiki implements user logins for editing and destroying Pokemon characters.
+
+The pages are responsive, although breakpoints could be improved. 
+
+
+###Outstanding Issues
+
+- Unable to get postgresql working on Cloud9. Toggle between sqlite3 on Cloud9 and postgresql on Heroku;
+- Highcharts plug-in not working on Heroku. Errors with asset pre-compilation when pushing to Heroku. Had to disable some config to push.
+- Facilities to store Pokemon pictures unavailable in Heroku - to look for solutions.
